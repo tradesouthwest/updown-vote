@@ -221,6 +221,9 @@ class Core {
 		$this->loader->add_action( 'wp_ajax_udv_noprivi_downvote', 
 			$plugin_public, 'udv_downvote'
 		);
+		$this->loader->add_action( 'display_single_updownvote', 
+			$plugin_plublic, 'execute_shortcode' 
+		);
 		$this->loader->add_action( 'init', $plugin_public, 
 			'register_shortcodes' 
 		);
