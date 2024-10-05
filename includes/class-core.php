@@ -222,7 +222,7 @@ class Core {
 			$plugin_public, 'udv_downvote'
 		);
 		$this->loader->add_action( 'display_single_updownvote', 
-			$plugin_plublic, 'execute_shortcode' 
+			$plugin_public, 'execute_shortcode' 
 		);
 		$this->loader->add_action( 'init', $plugin_public, 
 			'register_shortcodes' 
