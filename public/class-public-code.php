@@ -134,6 +134,18 @@ class Public_Code {
 		add_shortcode( 'updownvote', [ $this, 'udv_display_votes' ] );
 	}
 
+	/**
+	 * shortcode prints on the front end.
+	 * @since 1.0.0
+	 * 
+	 */
+	public function execute_shortcode() {
+		if ( method_exists( $this, 'udv_display_votes' ) ) {
+			echo do_shortcode( '[updownvote]' ); 
+		} else {
+			return '';
+		}
+	}
 
     /**
      * Set actions for Ajax to return updownvote results
